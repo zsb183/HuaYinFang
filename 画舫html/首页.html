@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+    <title>画舫</title>
+    <link rel="stylesheet" href="../icon/iconfont.css">
+    <link rel="stylesheet" href="../css/背景板.css">
+    <script src="../js/JQuery.min.js"></script>
+    <script src="../js/touch.min.js"></script>
+
+    <style>
+        /*使图片在浏览器中居中显示*/
+        
+        .bigImg {
+            width: 60%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /*图片向左移动自身宽度的50%, 向上移动自身高度的50%。*/
+            transform: translate(-50%, -50%);
+        }
+        /*遮罩层*/
+        
+        .opacityBottom {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            top: 0;
+            left: 0;
+        }
+        
+        .main {
+            flex: 1;
+            width: 100%;
+            margin-top: 4rem;
+        }
+        
+        .main_ul {
+            list-style: none;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-between;
+        }
+        
+        .main_ul>li {
+            margin-top: 2rem;
+            width: 40%;
+            height: 20rem;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 0.5rem;
+            box-shadow: 0.5rem 0.5rem 1rem #888888;
+        }
+        
+        .img_box {
+            width: 90%;
+            height: 70%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .img_box>img {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /*图片向左移动自身宽度的50%, 向上移动自身高度的50%。*/
+            transform: translate(-50%, -50%);
+        }
+        
+        .img_text {
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        .img_text>span {
+            width: 0.2rem;
+            height: 2rem;
+            background-color: black;
+        }
+        
+        .img_text>label {
+            margin-left: 1rem;
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg2"></div>
+    <nav>
+        <div class="nav">
+            <div class="menu ">
+                <div class="menuTop"></div>
+                <div class="menuMid"></div>
+                <div class="menuBot"></div>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="请输入关键字">
+                <i class="iconfont icon-icon-test icon_search"></i>
+            </div>
+        </div>
+        <ul class="menu_ul menu_hid">
+            <li><a href="../画舫html/首页.html">首页</a></li>
+            <li><a href="../画舫html/美腿.html">美腿</a></li>
+            <li><a href="../画舫html/性感.html">性感</a></li>
+            <li><a href="../画舫html/清纯.html">清纯</a></li>
+            <li><a href="../画舫html/横版.html">横版</a></li>
+            <li><a href="../画舫html/cos.html">COS</a></li>
+            <li><a href="../画舫html/3D.html">3D</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="main_top">
+            <h4>画舫</h4>
+            <p>美图欣赏主题-为壁纸、照片、相册而生</p>
+        </div>
+        <div class="main">
+            <ul class="main_ul">
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/美腿/1.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>过期米线喵</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/性感/3.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>斗鱼-王羽杉</label>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script src="../js/rem比例.js"></script>
+
+<script src="../js/背景板.js"></script>
+
+<script src="../js/图片懒加载.js"></script>
+
+<script>
+    $('img').click(function() {
+        //获取图片路径
+        var imgsrc = $(this).attr("src");
+        console.log(imgsrc);
+        var opacityBottom = '<div class="opacityBottom" style = "display:none"><img class="bigImg" src="' + imgsrc + '"></div>';
+        $(document.body).append(opacityBottom);
+        toBigImg(); //变大函数
+
+    });
+
+    function toBigImg() {
+        $(".opacityBottom").addClass("opacityBottom"); //添加遮罩层
+        $(".opacityBottom").show();
+        $("html,body").addClass("none-scroll"); //下层不可滑动
+        $(".bigImg").addClass("bigImg"); //添加图片样式
+        $(".opacityBottom").click(function() { //点击关闭
+            $("html,body").removeClass("none-scroll");
+            $(".opacityBottom").remove();
+        });
+    }
+</script>

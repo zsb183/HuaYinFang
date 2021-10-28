@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bg {
+    width: 100%;
+    height: 66.7rem;
+    position: fixed;
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+    z-index: -2;
+}
+
+.bg2 {
+    width: 100%;
+    height: 66.7rem;
+    position: fixed;
+    background-color: #888;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+nav {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav_click {
+    z-index: 1;
+    height: 66.7rem;
+    background-color: rgba(255, 255, 255, 0.93);
+}
+
+.nav {
+    width: 90%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu {
+    width: 2.5rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu>div {
+    width: 100%;
+    height: 0.15rem;
+    background-color: #000;
+    transition: all 0.5s;
+}
+
+
+/* 菜单点击时动画 */
+
+.menu_close>.menuTop {
+    animation: menutop 0.3s linear forwards;
+}
+
+.menu_close>.menuMid {
+    animation: menumid 0.3s linear forwards;
+}
+
+.menu_close>.menuBot {
+    animation: menubot 0.3s linear forwards;
+}
+
+
+/* 菜单关闭时动画 */
+
+.recover>.menuTop {
+    animation: recover_menutop 0.3s linear forwards;
+}
+
+.recover>.menuMid {
+    animation: recover_menumid 0.3s linear forwards;
+}
+
+.recover>.menuBot {
+    animation: recover_menubot 0.3s linear forwards;
+}
+
+@keyframes menutop {
+    0% {}
+    100% {
+        transform-origin: 0 0.075rem;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes recover_menutop {
+    0% {
+        transform-origin: 0 0.075rem;
+        transform: rotate(45deg);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes menumid {
+    0% {}
+    100% {
+        transform: translateY(1rem) scale(0);
+    }
+}
+
+@keyframes recover_menumid {
+    0% {
+        transform: translateY(1rem) scale(0);
+    }
+    100% {}
+}
+
+@keyframes menubot {
+    0% {}
+    100% {
+        transform-origin: 0 0.075rem;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes recover_menubot {
+    0% {
+        transform-origin: 0 0.075rem;
+        transform: rotate(-45deg);
+    }
+    100% {}
+}
+
+
+/* 搜素框 */
+
+.search {
+    z-index: 2;
+    width: 60%;
+    height: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    transition: height 0.5s;
+}
+
+.search>input {
+    transition: opacity 0.5s;
+    opacity: 0;
+    width: 70%;
+    height: 70%;
+    outline: none;
+    border: 0;
+    border-bottom: 0.01rem solid rgb(207, 207, 207);
+}
+
+.search>input::-webkit-input-placeholder {
+    font-size: 1.3rem;
+}
+
+.search>.iconfont {
+    font-size: 3rem;
+    /* margin-top: 0.5rem; */
+}
+
+nav>ul {
+    width: 90%;
+    z-index: 2;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+}
+
+nav>ul>li {
+    width: 100%;
+    height: 6rem;
+    border-top: 0.05rem solid rgb(209, 209, 209);
+}
+
+nav>ul>li:nth-of-type(1) {
+    border: 0;
+}
+
+nav>ul>li>a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 6rem;
+    font-size: 1.6rem;
+}
+
+.menu_hid {
+    height: 0 !important;
+    transition: height 0.5s;
+}
+
+main {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main_top {
+    margin-top: 2rem;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 楷体;
+}
+
+.main_top>h4 {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.main_top>p {
+    font-weight: 600;
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+}
