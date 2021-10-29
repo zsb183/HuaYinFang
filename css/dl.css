@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 颜色线性渐变 */
+body {
+    background: linear-gradient(91deg, #e3def5, #9dc6ff 100%, #859adb);
+    （body背景色）
+    /* background: linear-gradient(135deg,#56c8ff,#6f99fc) no-repeat;（button背景色） */
+
+}
+
+/* 导航栏部分 */
+header {
+    height: 60px;
+    border: 0px solid black;
+    display: flex;
+}
+
+header>span {
+    flex: 1;
+    height: 50px;
+    /* justify-content: end; */
+}
+
+header>span>img {
+    height: 80%;
+}
+
+header>p {
+    font-size: 30px;
+    color: #666666;
+}
+
+main>.log>img {
+    width: 180px;
+    height: 200px;
+    /* border: 1px solid black; */
+    display: block;
+    margin: 0 auto;
+}
+/* 登录框 */
+.form {
+    margin: 50px;
+}
+
+.row {
+    margin-top: 25px;
+    height: 26px;
+    line-height: 26px;
+    border-bottom: 1px solid #e8e8e8;
+    width: 328px;
+}
+
+.input {
+    position: relative;
+    width: 328px;
+    height: 26px;
+}
+
+.input input {
+    display: block;
+    width: 100%;
+    height: 26px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.input label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #999;
+}
+/* 提交框 */
+#btn>img{
+    height: 100%;
+    
+}
+#btn{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+/* footer模块 */
+.footer{
+    height: 400px;
+}
+.f1{
+    height: 100px;
+    /* border: 1px solid black; */
+    position: relative;
+    margin: 170px 21px;
+    display: flex;
+}
+.f1>.p1,.p2,.pan,.p3{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+/* align-items: center; */
+}
+.p3{
+    position: absolute;
+    /* border: 1px solid black; */
+height: 30px;
+width: 100%;
+bottom: 0;
+margin: 0px 10px;
+color: #999;
+}
+.sp{
+    height: 60px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -120px 88px;
+
+
+
+}
+.sp>span{
+    height: 50px;
+align-content: space-between;
+flex: 1;
+}
+.sp>span>img{
+    height: 100%;
+}
