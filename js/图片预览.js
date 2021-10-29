@@ -1,7 +1,7 @@
 $('.main_ul>li').click(function() {
 
     //获取图片路径
-    var imgsrc = $(".img").attr("src");
+    var imgsrc = $(this).find(".img").attr("src");
     // console.log(imgsrc);
     var opacityBottom = '<div class="opacityBottom" style = "display:none"><img class="bigImg changeImg" src="' + imgsrc + '"></div>';
     $(document.body).append(opacityBottom);
@@ -27,10 +27,12 @@ function toBigImg() {
     //     $(".opacityBottom").remove();
     // });
     $(".opacityBottom").on("tap", function(e) {
-        $("html,body").removeClass("none-scroll");
+        // $("html,body").removeClass("none-scroll");
         $(".opacityBottom").remove();
     })
-
+    $(".opacityBottom").on("swiperight", function(e) {
+        $(".opacityBottom").remove();
+    })
 
 
 }
