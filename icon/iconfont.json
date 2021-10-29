@@ -1,0 +1,23 @@
+{
+  "id": "2739965",
+  "name": "icon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8776842",
+      "name": "search",
+      "font_class": "icon-test",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "23505845",
+      "name": "car",
+      "font_class": "car",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    }
+  ]
+}
