@@ -11,95 +11,7 @@
     <link rel="stylesheet" href="../css/背景板.css">
     <script src="../js/JQuery.min.js"></script>
     <script src="../js/touch.min.js"></script>
-
-    <style>
-        /*使图片在浏览器中居中显示*/
-        
-        .bigImg {
-            width: 60%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            /*图片向左移动自身宽度的50%, 向上移动自身高度的50%。*/
-            transform: translate(-50%, -50%);
-        }
-        /*遮罩层*/
-        
-        .opacityBottom {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            top: 0;
-            left: 0;
-        }
-        
-        .main {
-            flex: 1;
-            width: 100%;
-            margin-top: 4rem;
-        }
-        
-        .main_ul {
-            list-style: none;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-content: space-between;
-        }
-        
-        .main_ul>li {
-            margin-top: 2rem;
-            width: 40%;
-            height: 20rem;
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            border-radius: 0.5rem;
-            box-shadow: 0.5rem 0.5rem 1rem #888888;
-        }
-        
-        .img_box {
-            width: 90%;
-            height: 70%;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .img_box>img {
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            /*图片向左移动自身宽度的50%, 向上移动自身高度的50%。*/
-            transform: translate(-50%, -50%);
-        }
-        
-        .img_text {
-            width: 100%;
-            height: 3rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-        }
-        
-        .img_text>span {
-            width: 0.2rem;
-            height: 2rem;
-            background-color: black;
-        }
-        
-        .img_text>label {
-            margin-left: 1rem;
-            font-size: 1.4rem;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/竖版主体.css">
 </head>
 
 <body>
@@ -119,12 +31,13 @@
         </div>
         <ul class="menu_ul menu_hid">
             <li><a href="../画舫html/首页.html">首页</a></li>
+            <li><a href="../画舫html/横版.html">横版</a></li>
             <li><a href="../画舫html/美腿.html">美腿</a></li>
             <li><a href="../画舫html/性感.html">性感</a></li>
             <li><a href="../画舫html/清纯.html">清纯</a></li>
-            <li><a href="../画舫html/横版.html">横版</a></li>
             <li><a href="../画舫html/cos.html">COS</a></li>
             <li><a href="../画舫html/3D.html">3D</a></li>
+            <li><a href="../迷音html/index.html">返回迷音</a></li>
         </ul>
     </nav>
     <main>
@@ -152,7 +65,151 @@
                         <span></span> <label>斗鱼-王羽杉</label>
                     </div>
                 </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/清纯/3.jpg" class="img">
+                    </div>
 
+                    <div class="img_text">
+                        <span></span> <label>天航工作室 上海店作品 ​​​</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/性感/6.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>性感旗袍</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/cos/6.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>古装coser</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/性感/11.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>云想衣裳花想容@三度</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/美腿/4.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>宋昕冉</label>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/3D/20.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>天行九歌-胡美人</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/美腿/8.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>职业装</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/3D/3.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>王者-嫦娥</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/3D/14.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>斗破苍穹-美杜莎</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/清纯/15.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>帅气美女</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/美腿/16.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>琴团长cos</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/美腿/13.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>超清4K美女</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/清纯/17.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>三上悠亚-鬼头桃菜</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/清纯/18.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>汉服</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/清纯/20.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>校服</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_box">
+                        <img src="../img/bg.jpg" data-realUrl="../img/清纯/5.jpg" class="img">
+                    </div>
+
+                    <div class="img_text">
+                        <span></span> <label>吊带及膝裙</label>
+                    </div>
+                </li>
             </ul>
         </div>
     </main>
@@ -166,25 +223,4 @@
 
 <script src="../js/图片懒加载.js"></script>
 
-<script>
-    $('img').click(function() {
-        //获取图片路径
-        var imgsrc = $(this).attr("src");
-        console.log(imgsrc);
-        var opacityBottom = '<div class="opacityBottom" style = "display:none"><img class="bigImg" src="' + imgsrc + '"></div>';
-        $(document.body).append(opacityBottom);
-        toBigImg(); //变大函数
-
-    });
-
-    function toBigImg() {
-        $(".opacityBottom").addClass("opacityBottom"); //添加遮罩层
-        $(".opacityBottom").show();
-        $("html,body").addClass("none-scroll"); //下层不可滑动
-        $(".bigImg").addClass("bigImg"); //添加图片样式
-        $(".opacityBottom").click(function() { //点击关闭
-            $("html,body").removeClass("none-scroll");
-            $(".opacityBottom").remove();
-        });
-    }
-</script>
+<script src="../js/图片预览.js"></script>

@@ -3,6 +3,7 @@ touch.on(menu, 'tap', function() {
     $(".menu").removeClass("recover");
     if ($(".menu").is('.menu_close')) {
         $(".menu").toggleClass("recover");
+
     }
     $(".menu").toggleClass("menu_close");
     $("nav").toggleClass("nav_click");
