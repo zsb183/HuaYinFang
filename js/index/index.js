@@ -84,3 +84,12 @@ video.addEventListener('canplay', function () {
     }
 
 });
+
+$(function(){
+    $('.item .like5').eq(0).show().siblings().hide()
+    $('.tep a').click(function(){
+         $(this).addClass('tep1').siblings().removeClass('tep1')
+         var index = $(this).index();
+         $('.item .like5').eq(index).show().siblings().hide()
+    })
+})
