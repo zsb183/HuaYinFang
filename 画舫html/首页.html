@@ -10,8 +10,14 @@
     <link rel="stylesheet" href="../icon/iconfont.css">
     <link rel="stylesheet" href="../css/背景板.css">
     <script src="../js/JQuery.min.js"></script>
-    <script src="../js/touch.js"></script>
+    <script src="../js/touch-0.2.14.min.js"></script>
     <link rel="stylesheet" href="../css/竖版主体.css">
+    <link rel="stylesheet" href="../css/clock.css">
+    <style>
+        .main_ul {
+            margin-top: -3rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,10 +46,16 @@
             <li><a href="../迷音html/index.html">返回迷音</a></li>
         </ul>
     </nav>
+
     <main>
         <div class="main_top">
             <h4>画舫</h4>
             <p>美图欣赏主题-为壁纸、照片、相册而生</p>
+        </div>
+        <div class="clock_box">
+            <ul class="clock" id="helang-clock">
+                <hr>
+            </ul>
         </div>
         <div class="main">
             <ul class="main_ul">
@@ -227,3 +239,9 @@
 <script src="../js/图片懒加载.js"></script>
 
 <script src="../js/图片预览.js"></script>
+
+<script src="../js/clock.js"></script>
+
+<script type="text/javascript">
+    $("#helang-clock").clock();
+</script>
