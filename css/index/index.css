@@ -149,6 +149,7 @@ main>div:nth-of-type(2) {
 .like4>div:nth-of-type(2) {
     font-size: 1.5rem;
     flex: 2;
+    display: flex;
 }
 
 .like4>div:nth-of-type(2)>a {
@@ -159,6 +160,10 @@ main>div:nth-of-type(2) {
     border-bottom: .2rem solid #FF9AFF;
 }
 
+.tep1{
+    color: coral;
+    border-bottom: .1rem solid coral;
+}
 .like5>ul>li {
 
     width: 28%;
@@ -173,6 +178,8 @@ main>div:nth-of-type(2) {
 
 .like5 img {
     width: 100%;
+    height: 11rem;
+    border-radius: 1rem;
 }
 
 .like5>ul>li>div:nth-of-type(2) {
@@ -188,6 +195,8 @@ main>div:nth-of-type(2) {
     height: 3.5rem;
     margin: .5rem .5rem;
 }
+
+
 
 
 

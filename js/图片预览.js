@@ -4,7 +4,7 @@ $('.main_ul>li').on("tap", function(e) {
     var index = $(this).index();
     var imgsrc = $(this).find(".img").attr("src");
     // console.log(imgsrc);
-    var opacityBottom = '<div class="opacityBottom" style = "display:none"><img class="bigImg changeImg" src="' + imgsrc + '"></div>';
+    var opacityBottom = '<div class="opacityBottom" style = "display:none"><img class="bigImg " src="' + imgsrc + '"></div>';
     $(document.body).append(opacityBottom);
     toBigImg(index); //变大函数
 
@@ -21,7 +21,7 @@ $('.main_ul>li').on("tap", function(e) {
 //     toBigImg(); //变大函数
 // })
 
-function toBigImg(index) {
+function toBigImg(index, width) {
 
 
     $(".opacityBottom").addClass("opacityBottom"); //添加遮罩层
@@ -38,6 +38,10 @@ function toBigImg(index) {
 
     })
 
+
+    touchScale();
+
+    $(".bigImg").removeClass("changeImg");
     $(".opacityBottom").on("swiperight", function() {
         if (index > 0) {
             $(".opacityBottom").remove();
@@ -50,7 +54,7 @@ function toBigImg(index) {
         $(document.body).append(opacityBottom);
         var res = $('.main_ul>li').length;
         if (index > 0) {
-            toBigImg(index - 1);
+            toBigImg(index - 1, width);
         } else {
             return false;
         }
@@ -67,12 +71,12 @@ function toBigImg(index) {
         var opacityBottom = '<div class="opacityBottom" style = "display:none"><img class="bigImg changeImg" src="' + imgsrc + '"></div>';
         $(document.body).append(opacityBottom);
         if (index < res - 1) {
-            toBigImg(index + 1);
+            toBigImg(index + 1, width);
         } else {
             return false;
         }
     });
-    touchScale();
+
 
 }
 
@@ -151,6 +155,7 @@ function touchScale() {
             ];
         }
     });
+
     var getData = function() {
         return imgData;
     };
