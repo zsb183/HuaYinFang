@@ -12,6 +12,29 @@
     <script src="../js/JQuery.min.js"></script>
     <script src="../js/touch.min.js"></script>
     <link rel="stylesheet" href="../css/横版主体.css">
+    <style>
+        .video {
+            margin-bottom: 4rem;
+            width: 85%;
+            border-radius: 0.5rem;
+            background-color: #fff;
+            height: 22rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        .video>video {
+            margin-top: 1rem;
+            width: 95%;
+        }
+        
+        .video>span {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,6 +68,7 @@
             <h4>画舫</h4>
             <p>美图欣赏主题-为壁纸、照片、相册而生</p>
         </div>
+
         <div class="main">
             <ul class="main_ul">
                 <li>
@@ -301,6 +325,10 @@
                     </div>
                 </li>
             </ul>
+        </div>
+        <div class="video">
+            <video src="../img/横版/阿离.mp4" autoplay muted loop></video>
+            <span>能多喜欢阿离一点吗？</span>
         </div>
     </main>
     <footer>

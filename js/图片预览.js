@@ -129,7 +129,7 @@ function touchScale() {
                 scale = endX - startX;
 
                 $me.css({
-                    'width': originalWidth + scale,
+                    'width': originalWidth + scale * 5,
                     // 'height': originalWidth + scale　　 //如果图片被拉伸了可以把这句去掉，让图片自适应
                 });
 
@@ -151,7 +151,7 @@ function touchScale() {
                 siteData($me);
             imgData = [
                 [imgLeft, imgTop - bgTop, imgWidth, imgHeight],
-                [0, 0, 2000, 2000]
+                [0, 0, 640, 640]
             ];
         }
     });
